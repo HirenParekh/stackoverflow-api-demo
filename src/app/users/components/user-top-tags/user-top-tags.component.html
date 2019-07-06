@@ -1,0 +1,15 @@
+<div class="top-tags-wrapper" *ngIf="tags; else noTags">
+  <app-single-tag [tag]="tags[0]"></app-single-tag>
+  <div class="second-row-tags">
+    <app-single-tag [tag]="tags[1]"></app-single-tag>
+    <app-single-tag [tag]="tags[2]"></app-single-tag>
+  </div>
+  <div class="third-row-tags">
+    <app-single-tag [tag]="tags[3]" [isSmall]="true"></app-single-tag>
+    <app-single-tag [tag]="tags[4]" [isSmall]="true"></app-single-tag>
+    <app-single-tag [tag]="tags[5]" [isSmall]="true"></app-single-tag>
+  </div>
+</div>
+<ng-template #noTags>
+  <div>This user don't have any active tags.</div>
+</ng-template>

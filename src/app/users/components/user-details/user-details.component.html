@@ -1,0 +1,34 @@
+<div class="user-details-wrapper">
+  <div class="basic-info">
+    <div class="profile-badge">
+      <div class="profile-pic">
+        <img [src]="user.profile_image" alt="user profile picture">
+      </div>
+      <div class="reputation">
+        <span class="reputation-count">{{user.reputation | number:'1.0-0'}}</span> REPUTATION
+      </div>
+      <div class="badge-container">
+        <div class="user-badge gold-badge" *ngIf="user?.badge_counts?.gold">{{user.badge_counts.gold}}</div>
+        <div class="user-badge silver-badge" *ngIf="user?.badge_counts?.silver">{{user.badge_counts.silver}}</div>
+        <div class="user-badge bronze-badge" *ngIf="user?.badge_counts?.bronze">{{user.badge_counts.bronze}}</div>
+      </div>
+    </div>
+    <div class="user-summary">
+      <div class="user-name">{{user.display_name}}</div>
+      <div class="user-location">{{user.location}}</div>
+      <div class="user-website">
+        <a [href]="user.website_url">{{user.website_url}}</a>
+      </div>
+    </div>
+  </div>
+  <div class="info-section">
+    <div class="info-title">Top tags ({{(topTags$ | async)?.length}})</div>
+    <div class="user-tags-container">
+      <app-user-top-tags [tags]="topTags$ | async"></app-user-top-tags>
+    </div>
+  </div>
+  <div class="info-section">
+    <div class="info-title">Top Questions</div>
+    <app-questions-list [questions]="userQuestions$ | async"></app-questions-list>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.app-header {
+  top: 0;
+  height: 50px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  box-shadow: 0 1px 0 rgba(12, 13, 14, 0.1), 0 1px 6px rgba(59, 64, 69, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  z-index: 2;
+  background-color: #ffffff;
+
+  .logout-btn {
+    background-color: #0095ff;
+    color: #ffffff;
+    border: 1px solid #0077CC;
+    padding: 8px;
+    border-radius: 3px;
+  }
+}

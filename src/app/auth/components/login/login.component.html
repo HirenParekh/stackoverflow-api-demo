@@ -1,0 +1,22 @@
+<div class="login-wrapper">
+  <div class="login-form">
+    <img src="../../../../assets/images/logo.png" style="margin: 0 auto 0px auto">
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginFormSubmitEventHandler()">
+      <div class="form-field">
+        <span class="field-title">Email<sup>*</sup></span>
+        <input type="email" class="field-ctrl" formControlName="email">
+        <small class="field-error" *ngIf="loginForm.get('email').hasError('required')">email is required field</small>
+        <small class="field-error" *ngIf="loginForm.get('email').hasError('email')">please enter correct email address</small>
+      </div>
+      <div class="form-field">
+        <span class="field-title">Password<sup>*</sup></span>
+        <input type="password" class="field-ctrl" formControlName="password">
+        <small class="field-error" *ngIf="loginForm.get('password').hasError('required')">password is required field</small>
+        <small class="field-error" *ngIf="loginForm.get('password').hasError('minlength')">password must have at least 6 characters</small>
+      </div>
+      <div class="form-actions">
+        <button class="btn-login">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="tag" [class.xs]="isSmall" *ngIf="tag">
+  <div class="tag-name">{{tag.tag_name}}</div>
+  <div class="tag-info-wrapper">
+    <div class="tag-info">
+      <span>score</span>
+      <span class="tag-info-value">{{tag.answer_score}}</span>
+    </div>
+    <div class="tag-info">
+      <span>posts</span>
+      <span class="tag-info-value">{{tag.answer_count}}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,137 @@
+.single-question-wrapper {
+  display: flex;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #dddddd;
+  align-items: flex-start;
+
+  .question-statistics {
+    display: flex;
+    min-width: 170px;
+    justify-content: space-between;
+    .statistics-item {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 4px;
+      min-width: 44px;
+      height: auto;
+      font-size: 11px;
+      padding: 6px;
+      border: 1px solid transparent;
+      border-radius: 3px;
+
+      &.has-answer{
+        border-radius: 3px;
+        border: 1px solid #45A163;
+        .item-value {
+          color: #45A163;
+        }
+        .item-name {
+          color: #45A163;
+        }
+      }
+
+      &.has-accepted-answer{
+        border-radius: 3px;
+        border: 1px solid #45A163;
+        background-color: #45A163;
+        .item-value {
+          color: #fff;
+        }
+        .item-name {
+          color: #fff;
+        }
+      }
+
+      .item-value {
+        font-size: 14px;
+        margin-bottom: 4px;
+        color: #6a737c;
+      }
+
+      .item-name {
+        font-size: 12px;
+        color: #848d95;
+      }
+    }
+  }
+
+  .question-details {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    flex: 1;
+    .details-top {
+      margin-bottom: 8px;
+      .bounty-badge {
+        float: left;
+        color: #FFF;
+        font-size: 11px;
+        padding: 0.2em 0.5em 0.25em;
+        line-height: 14px;
+        background-color: #0077dd;
+        margin-right: 5px;
+        border-radius: 2px;
+      }
+
+      .question-title {
+        color: #0077cc;
+        font-size: 16px;
+        font-weight: 400;
+        cursor: pointer;
+      }
+    }
+
+    .details-bottom {
+      font-size: 13px;
+
+      .tags-container {
+        float: left;
+        .question-tag {
+          color: #39739d;
+          background-color: #E1ECF4;
+          border-color: #E1ECF4;
+          display: inline-block;
+          padding: 5px 6px;
+          margin: 2px 4px 2px 0;
+          font-size: 12px;
+          line-height: 1;
+          white-space: nowrap;
+          text-decoration: none;
+          text-align: center;
+          border-width: 1px;
+          border-style: solid;
+          border-radius: 3px;
+          transition: all .15s ease-in-out;
+        }
+      }
+
+      .summary {
+        float: right;
+        .started-time {
+          font-size: 12px;
+          color: #9199a1;
+          margin-right: 4px;
+        }
+
+        .user-name {
+          margin-right: 4px;
+          color: #07C;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .user-rep {
+          font-size: 12px;
+          color: #848d95;
+          font-weight: bold;
+          margin-right: 2px;
+        }
+      }
+    }
+
+  }
+}

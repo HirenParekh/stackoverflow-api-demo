@@ -1,0 +1,138 @@
+.user-details-wrapper {
+  padding: 20px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+
+  .basic-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .profile-badge {
+    margin-right: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 15px;
+    position: relative;
+    &::before{
+      content: "";
+      background-color: #eff0f1;
+      height: 45%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+    .profile-pic {
+      margin-bottom: 8px;
+      img {
+        height: 164px;
+        width: 164px;
+      }
+    }
+
+    .reputation {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #6a737c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+
+      .reputation-count {
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 4px;
+        color: #333;
+      }
+    }
+
+    .badge-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .user-badge {
+        font-size: 12px;
+        border: 1px solid transparent;
+        padding: 4px 8px;
+        margin: 2px;
+
+        &::before {
+          content: "";
+          height: 7px;
+          width: 7px;
+          margin-right: 4px;
+          border-radius: 50%;
+          display: inline-block;
+        }
+      }
+
+      .gold-badge {
+        border-color: #ece5c6;
+        background-color: #fffae6;
+
+        &::before {
+          background-color: #ffcc01;
+        }
+      }
+
+      .silver-badge {
+        background-color: #eaebec;
+        border-color: #dddee0;
+
+        &::before {
+          background-color: #b4b8bc;
+        }
+      }
+
+      .bronze-badge {
+        background-color: #f8e9dd;
+        border-color: #f0decb;
+
+        &::before {
+          background-color: #d1a684;
+        }
+      }
+    }
+  }
+
+  .user-summary {
+    .user-name {
+      font-size: 27px;
+      margin-bottom: 4px;
+    }
+    .user-location {
+      color: #6a737c;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+    .user-website {
+      font-size: 14px;
+      a{
+        color: #0077CC;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .info-section {
+    margin-bottom: 20px;
+
+    .info-title {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      font-weight: 700;
+    }
+
+    .user-tags-container {
+
+    }
+  }
+}

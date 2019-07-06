@@ -1,0 +1,32 @@
+<div class="single-question-wrapper">
+  <div class="question-statistics">
+    <div class="statistics-item">
+      <span class="item-value">{{question.score}}</span>
+      <span class="item-name">{{question.score > 1 ? 'votes' : 'vote'}}</span>
+    </div>
+    <div class="statistics-item" [class.has-answer]="question.answer_count > 0" [class.has-accepted-answer]="question.is_answered">
+      <span class="item-value">{{question.answer_count}}</span>
+      <span class="item-name">{{question.answer_count > 1 ? 'answers' : 'answer'}}</span>
+    </div>
+    <div class="statistics-item">
+      <span class="item-value">{{question.view_count}}</span>
+      <span class="item-name">{{question.view_count > 1 ? 'views' : 'view'}}</span>
+    </div>
+  </div>
+  <div class="question-details">
+    <div class="details-top">
+      <div class="bounty-badge" *ngIf="question.bounty_amount">+{{question.bounty_amount}}</div>
+      <div class="question-title">{{question.title}}</div>
+    </div>
+    <div class="details-bottom">
+      <div class="tags-container">
+        <span class="question-tag" *ngFor="let tag of question.tags">{{tag}}</span>
+      </div>
+      <div class="summary">
+        <span class="started-time">{{question.creation_date | date: 'MMM dd'}} at {{question.creation_date | date:'HH:mm'}}</span>
+        <a class="user-name" [routerLink]="['/users',question.owner.user_id]">{{question.owner.display_name}}</a>
+        <span class="user-rep">{{question.owner.reputation}}</span>
+      </div>
+    </div>
+  </div>
+</div>

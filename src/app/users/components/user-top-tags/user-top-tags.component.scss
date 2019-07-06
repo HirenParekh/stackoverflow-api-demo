@@ -1,0 +1,15 @@
+.top-tags-wrapper {
+  font-size: 18px;
+  app-single-tag{
+    flex: 1;
+  }
+  .second-row-tags {
+    display: flex;
+    font-size: 0.825em;
+  }
+
+  .third-row-tags {
+    display: flex;
+    font-size: 0.625em;
+  }
+}
