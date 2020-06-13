@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 [https://stackoverflow-api-demo.web.app/](https://stackoverflow-api-demo.web.app/)
 
-On the Featured Questions page you can click on user names to see their profile.
+> On the Featured Questions page you can click on user names to see their profile.
 
 ## Development server
 
