@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SingleTagComponent } from './single-tag.component';
 
@@ -6,7 +6,7 @@ describe('SingleTagComponent', () => {
   let component: SingleTagComponent;
   let fixture: ComponentFixture<SingleTagComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ SingleTagComponent ]
     })
