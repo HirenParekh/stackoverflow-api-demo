@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
+## Demo
+
+[https://stackoverflow-api-demo.web.app/](https://stackoverflow-api-demo.web.app/)
+
+> On the Featured Questions page you can click on user names to see their profile.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
