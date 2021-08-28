@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "stackoverflow": "stackoverflow-api-demo",
+    "default": "stackoverflow-api-demo"
+  }
+}
